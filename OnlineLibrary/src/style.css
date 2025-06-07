@@ -1,1 +1,11 @@
 @import "tailwindcss";
+.Parent-container{
+    @apply h-screen bg-linear-to-br from-red-700 via-amber-600 to-amber-950;
+}
+/* Navigation bar */
+.Nav{
+    @apply  p-4 flex justify-end gap-10 ;
+}
+.Nav-link{
+    @apply text-white hover:text-gray-600 text-lg font-medium;
+}
