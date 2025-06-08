@@ -19,33 +19,58 @@
 .Welcome-Header{
     @apply mt-10 text-center text-3xl font-semibold text-white;
 }
+/* Displaying books on homepage */
 .Section-Book{
   @apply mt-5 ml-15 grid grid-cols-3 gap-10; 
 }
-.Book-container{
-    @apply bg-white scale-75 h-auto flex justify-center items-center rounded-md  hover:scale-85 duration-300 ease-linear;
+.Book-container, .display-container{
+ @apply bg-white scale-75 h-auto  rounded-md ;
 }
-.Book-detail{
+.display-container{
+    @apply flex justify-center items-center hover:scale-85 duration-300 ease-linear;
+}
+.display-detail{
     @apply flex flex-col justify-center items-center p-8;
 }
-.Book-img{
+.display-img{
     @apply h-[20rem] scale-75;
 }
-.Book-title, .Book-author{
+.display-title{
+    @apply text-2xl font-semibold text-center;
+}
+
+.Book-title, .Book-author,.display-title{
     @apply bg-linear-to-br from-red-700 via-amber-600 to-amber-950 text-transparent bg-clip-text;
 }
+/* Displaying the single Book */
+.Book-detail{
+    @apply flex gap-30 h-screen;
+}
 .Book-title{
-    @apply text-3xl font-semibold text-center;
+    @apply text-4xl font-bold ;
+}
+.Detail-text{
+    @apply flex flex-col justify-center items-center gap-10 px-5;
 }
 .Book-author{
-    @apply text-xl font-semibold;
+    @apply text-2xl font-semibold;
 }
 .Book-description{
-    @apply mt-5 text-base font-semibold text-start;
+    @apply mt-5 text-xl font-semibold text-center;
 }
 .span-text{
     @apply font-extrabold block text-center;
 }
 .mini-desc{
     @apply mt-5 flex gap-25;
+}
+.end-desc{
+    @apply text-xl;
+}
+.Search-btn {
+    @apply p-5 text-lg font-semibold text-white bg-gradient-to-br from-red-700 via-amber-600 to-amber-950 rounded-xl transition-all duration-300 ease-in-out;
+}
+
+.Search-btn:hover {
+    @apply bg-gradient-to-tl from-red-700 via-amber-600 to-amber-950 opacity-85;
 }
