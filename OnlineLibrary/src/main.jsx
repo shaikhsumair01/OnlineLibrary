@@ -5,6 +5,7 @@ import App from './App.jsx'
 import Home from '../Components/Home.jsx'
 import Search from '../Components/Search.jsx'
 import AddNew from '../Components/AddNew.jsx'
+import Bookdesc from '../Components/Bookdesc.jsx'
 
 const Routes = createBrowserRouter(
   [{
@@ -14,6 +15,10 @@ const Routes = createBrowserRouter(
     children:[{
       path:"/",
       element:<Home/>,
+    },
+    {
+      path:"/book/:id",
+      element:<Bookdesc/>,
     },
     {
       path:"/Search",
