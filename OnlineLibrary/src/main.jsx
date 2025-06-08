@@ -6,6 +6,7 @@ import Home from '../Components/Home.jsx'
 import Search from '../Components/Search.jsx'
 import AddNew from '../Components/AddNew.jsx'
 import Bookdesc from '../Components/Bookdesc.jsx'
+import Error from '../Components/Error.jsx'
 
 const Routes = createBrowserRouter(
   [{

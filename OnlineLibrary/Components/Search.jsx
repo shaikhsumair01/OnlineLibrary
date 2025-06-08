@@ -1,5 +1,14 @@
+import BookDisplay from "./BookDisplay"
+import { mockBooks } from "../utils/books-details"
 export default function Search(){
     return(
-        <h1> Search Component </h1>
+        <>
+        <div className="Searchdiv">
+        <input type="text" name="textbox" className="Searchbar"/>
+        <button className="Search-btn">Submit</button>
+        </div>
+        <BookDisplay/>
+        </>
+        
     )
 }

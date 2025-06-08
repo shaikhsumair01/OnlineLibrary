@@ -1,4 +1,9 @@
 @import "tailwindcss";
+/*******/
+/* App.jsx */
+/*******/
+
+/* Main body styling */
 .html{
     @apply h-auto;
 }
@@ -8,6 +13,11 @@
 .Parent-container{
     @apply min-h-auto;
 }
+
+/*******/
+/* Header.jsx */
+/*******/
+
 /* Navigation bar */
 .Nav{
     @apply  pt-4 pr-8 flex justify-end gap-10 ;
@@ -15,14 +25,25 @@
 .Nav-link{
     @apply text-white hover:text-gray-700 text-lg font-medium;
 }
+
+/*******/
+/* Home.jsx */
+/*******/
+
 /* Welcome Header */
 .Welcome-Header{
     @apply mt-10 text-center text-3xl font-semibold text-white;
 }
+
 /* Displaying books on homepage */
 .Section-Book{
   @apply mt-5 ml-15 grid grid-cols-3 gap-10; 
 }
+
+/*******/
+/* BookDisplay */
+/*******/
+/* Styling each book from book list (and even the book item) */
 .Book-container, .display-container{
  @apply bg-white scale-75 h-auto  rounded-md ;
 }
@@ -42,6 +63,10 @@
 .Book-title, .Book-author,.display-title{
     @apply bg-linear-to-br from-red-700 via-amber-600 to-amber-950 text-transparent bg-clip-text;
 }
+
+/*******/
+/* styling Bookdesc.jsx */
+/*******/
 /* Displaying the single Book */
 .Book-detail{
     @apply flex gap-30 h-screen;
@@ -67,10 +92,49 @@
 .end-desc{
     @apply text-xl;
 }
-.Search-btn {
+.desc-btn {
     @apply p-5 text-lg font-semibold text-white bg-gradient-to-br from-red-700 via-amber-600 to-amber-950 rounded-xl transition-all duration-300 ease-in-out;
 }
 
-.Search-btn:hover {
+.desc-btn:hover{
     @apply bg-gradient-to-tl from-red-700 via-amber-600 to-amber-950 opacity-85;
+}
+
+/*******/
+/* Styling Error.jsx */
+/*******/
+
+.Error-Message{
+    @apply flex flex-col gap-5 justify-center items-center h-screen;
+}
+.Error-title{
+    @apply text-5xl text-white font-semibold; 
+}
+.Error-para{
+    @apply text-2xl font-semibold;
+}
+.icon{
+    @apply ml-5 text-yellow-300 text-4xl;
+}
+.Error-status{
+    @apply text-3xl text-white font-bold;
+}
+.Error-data{
+    @apply text-xl font-medium italic;
+}
+.return-btn{
+    @apply p-3 rounded-2xl bg-white text-2xl text-amber-600 font-medium hover:bg-gray-200;
+}
+
+/*******/
+/* Styling Search.jsx */
+/*******/
+.Searchdiv{
+    @apply mt-5 flex justify-between mx-auto bg-white w-[35%] rounded-2xl mb-5;
+}
+.Searchbar{
+    @apply focus:outline-none text-xl pl-3 bg-linear-to-br from-red-700 via-amber-600 to-amber-950 text-transparent bg-clip-text;
+}
+.Search-btn{
+    @apply text-base p-2 bg-black hover:bg-gray-700 font-medium text-white rounded-2xl ;
 }
