@@ -5,7 +5,7 @@
 
 /* Main body styling */
 .html{
-    @apply h-auto;
+    @apply h-auto overflow-x-hidden;
 }
 .body-container{
     @apply min-h-auto bg-linear-to-br from-red-700 via-amber-600 to-amber-950 bg-no-repeat;
@@ -113,7 +113,7 @@
 .Error-para{
     @apply text-2xl font-semibold;
 }
-.icon{
+.icon-error{
     @apply ml-5 text-yellow-300 text-4xl;
 }
 .Error-status{
@@ -129,12 +129,40 @@
 /*******/
 /* Styling Search.jsx */
 /*******/
+/* FilterNav container */
+.Filternav{
+    @apply mt-10 flex justify-center items-center gap-10;
+}
+
+.FilterHeading{
+    @apply w-50 text-lg font-medium text-white;
+}
+/* SearchBar */
 .Searchdiv{
-    @apply mt-5 flex justify-between mx-auto bg-white w-[35%] rounded-2xl mb-5;
+    @apply flex justify-between items-center bg-white w-[50%] rounded-2xl p-2;
 }
 .Searchbar{
-    @apply focus:outline-none text-xl pl-3 bg-linear-to-br from-red-700 via-amber-600 to-amber-950 text-transparent bg-clip-text;
+    @apply focus:outline-none text-lg pl-3 w-full bg-linear-to-br from-red-700 via-amber-600 to-amber-950 text-transparent bg-clip-text;
 }
-.Search-btn{
-    @apply text-base p-2 bg-black hover:bg-gray-700 font-medium text-white rounded-2xl ;
+/* Dropdown */
+
+.Dropdown{
+    @apply bg-white rounded-md flex gap-2;
 }
+.DropdownList{
+    @apply focus:outline-none font-medium text-amber-600;
+}
+.Filter-btn{
+    @apply text-base p-2 bg-black hover:bg-gray-700 font-medium text-white rounded-md ;
+}
+/* If the searchbar is empty */
+
+.NoResults{
+    @apply w-screen h-screen mx-50 my-50 text-2xl text-white font-semibold;
+}
+
+/* Category Page */
+.Category-title{
+    @apply mt-15 ml-30 text-2xl text-white;
+}
+

@@ -123,7 +123,7 @@ export const mockBooks = [
         author: "F. Scott Fitzgerald",
         description: "A tragic tale of love, ambition, and the American dream in the Jazz Age.",
         rating: 4.5,
-        genre: "Classic",
+        genre: "Romance",
     },
     
     {

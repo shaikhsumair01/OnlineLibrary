@@ -1,12 +1,16 @@
 import { useParams } from "react-router-dom"
 import { mockBooks } from "../utils/books-details"
 import { Link } from "react-router-dom";
+
+// Will use UseParams hook to get the id and display the book details based on the id of the clicked book
+
 export default function Bookdesc(){
      const { id } = useParams(); // Get book ID from URL
     const book = mockBooks.find(b => b.id === parseInt(id)); // Find book by ID
 
     if (!book) return <h1>Book not found</h1>; // Handle invalid book ID
 
+//     Displaying the entire container of book details
 return(
      <div className="Book-container">
         <div className="Book-detail">

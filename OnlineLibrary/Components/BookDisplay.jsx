@@ -1,4 +1,8 @@
 import { Link } from "react-router-dom"
+
+/* Displaying each book per container in form of cards 
+and when the book is clicked or desc-btn is clicked then we will 
+display the individual book based on id */
 export default function BookDisplay({book}){
     return(
         <Link to={`/book/${book.id}`}>
