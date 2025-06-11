@@ -5,7 +5,7 @@
 
 /* Main body styling */
 .html{
-    @apply h-auto overflow-x-hidden;
+    @apply h-auto overflow-x-hidden text-white;
 }
 .body-container{
     @apply min-h-auto bg-linear-to-br from-red-700 via-amber-600 to-amber-950 bg-no-repeat;
@@ -32,7 +32,7 @@
 
 /* Welcome Header */
 .Welcome-Header{
-    @apply mt-10 text-center text-3xl font-semibold text-white;
+    @apply mt-10 text-center text-3xl font-semibold ;
 }
 
 /* Displaying books on homepage */
@@ -81,7 +81,7 @@
     @apply text-2xl font-semibold;
 }
 .Book-description{
-    @apply mt-5 text-xl font-semibold text-center;
+    @apply mt-5 text-xl text-black font-semibold text-center;
 }
 .span-text{
     @apply font-extrabold block text-center;
@@ -90,7 +90,7 @@
     @apply mt-5 flex gap-25;
 }
 .end-desc{
-    @apply text-xl;
+    @apply text-xl text-black;
 }
 .desc-btn {
     @apply p-5 text-lg font-semibold text-white bg-gradient-to-br from-red-700 via-amber-600 to-amber-950 rounded-xl transition-all duration-300 ease-in-out;
@@ -108,19 +108,19 @@
     @apply flex flex-col gap-5 justify-center items-center h-screen;
 }
 .Error-title{
-    @apply text-5xl text-white font-semibold; 
+    @apply text-5xl font-semibold; 
 }
 .Error-para{
-    @apply text-2xl font-semibold;
+    @apply text-2xl text-black font-semibold;
 }
 .icon-error{
     @apply ml-5 text-yellow-300 text-4xl;
 }
 .Error-status{
-    @apply text-3xl text-white font-bold;
+    @apply text-3xl font-bold;
 }
 .Error-data{
-    @apply text-xl font-medium italic;
+    @apply text-xl text-black font-medium italic;
 }
 .return-btn{
     @apply p-3 rounded-2xl bg-white text-2xl text-amber-600 font-medium hover:bg-gray-200;
@@ -135,7 +135,7 @@
 }
 
 .FilterHeading{
-    @apply w-50 text-lg font-medium text-white;
+    @apply w-50 text-lg font-medium;
 }
 /* SearchBar */
 .Searchdiv{
@@ -152,17 +152,36 @@
 .DropdownList{
     @apply focus:outline-none font-medium text-amber-600;
 }
-.Filter-btn{
+.Filter-btn, .Add-btn{
     @apply text-base p-2 bg-black hover:bg-gray-700 font-medium text-white rounded-md ;
 }
 /* If the searchbar is empty */
 
 .NoResults{
-    @apply w-screen h-screen mx-50 my-50 text-2xl text-white font-semibold;
+    @apply w-screen h-screen mx-50 my-50 text-2xl font-semibold;
 }
 
 /* Category Page */
 .Category-title{
-    @apply mt-15 ml-30 text-2xl text-white;
+    @apply mt-15 ml-30 text-2xl;
 }
 
+/* AddNew page */
+.Add-header{
+    @apply text-3xl font-semibold text-center mt-5 mb-5;
+}
+.Error-text{
+    @apply text-xl mb-5 text-center;
+}
+.Add-Book{
+    @apply h-screen w-screen flex flex-col gap-10 justify-start items-center;
+}
+.Add-Container{
+    @apply w-[70%] flex gap-20 items-center justify-center;
+}
+.Add-text{
+    @apply text-xl font-medium; 
+}
+.Add-input{
+    @apply text-lg text-amber-700 bg-white p-2 rounded-md w-[60%] focus:outline-none;
+}

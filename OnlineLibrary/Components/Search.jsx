@@ -1,24 +1,31 @@
 import BookDisplay from "./BookDisplay"
 import { mockBooks } from "../utils/books-details"
 import { Link } from "react-router-dom"
-import { useState } from "react"
+import { useState, useEffect } from "react"
+import { useSelector } from "react-redux"
 
 /*Creating a search bar and a dropdown. 
 The searchbar uses useState in which when the value changes, 
 Based on user input it displays the books (filters books) 
 provided that the user enters the author name or the book title. 
 The dropdown is a list of categories on which when the user clicks on the category, 
-it reroutes the user to Category page. */
+it reroutes the user to Category page. Additionally we use useSelector from react-redux
+to take the state from the store and include the book which we have added through addnew page.*/
 export default function Search(){
 const [searchText, setSearchText] = useState("")
 const [category, setCategory] = useState("")
+const [books,setbooks] = useState([])
+const user_books = useSelector((state) => state.books.items);
+useEffect(() => {
+    setbooks([...user_books, ...mockBooks]);
+  }, [user_books])
 
 // Storing categories in an array
 const categories =["History", "Fiction", "Science", "Science Fiction", "Philosophy", "Psychology", "Anthropology", "Fantasy", "Self-help"];
 
 // Filtering book based on user input
 const filterBooks = ()=>{
-    const filteredBooks = mockBooks.filter((book)=>
+    const filteredBooks = books.filter((book)=>
         book.title.toLowerCase().includes(searchText.toLowerCase())|| book.author.toLowerCase().includes(searchText.toLowerCase()))
     return filteredBooks;
 }
@@ -58,7 +65,7 @@ const filteredBooks = filterBooks();
             <p className="NoResults">Cannot find the book. Please try again with a different search term.</p>
           )
         ) : (
-          mockBooks.map((book) => <BookDisplay key={book.id} book={book} />)
+          books.map((book) => <BookDisplay key={book.id} book={book} />)
         )}
       </div>
     </>

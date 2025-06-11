@@ -8,6 +8,8 @@ import AddNew from '../Components/AddNew.jsx'
 import Bookdesc from '../Components/Bookdesc.jsx'
 import Error from '../Components/Error.jsx'
 import Category from '../Components/CategoryPage.jsx'
+import { Provider } from 'react-redux'
+import { store } from '../utils/store.js'
 
 // Creating routes
 const Routes = createBrowserRouter(
@@ -41,6 +43,8 @@ const Routes = createBrowserRouter(
   // Rendering the routes
 createRoot(document.getElementById('root')).render(
   <StrictMode>
+    <Provider store={store}>
     <RouterProvider router={Routes} />
+    </Provider>
   </StrictMode>,
 )
