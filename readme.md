@@ -71,3 +71,7 @@ OnlineLibrary
 
 ## Github Link
 https://github.com/shaikhsumair01/OnlineLibrary
+
+#Update:
+-added dist folder in file
+-will implement hashrouter in future updates to deploy the page through github
