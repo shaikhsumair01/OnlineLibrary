@@ -14,11 +14,11 @@ import { store } from '../utils/store.js'
 // Creating routes
 const Routes = createBrowserRouter(
   [{
-    path:"/OnlineLibrary/",
+    path:"/OnlineLibrary",
     element:<App/>,
     errorElement: <Error/>,
     children:[{
-      path:"/OnlineLibrary/",
+      path:"/OnlineLibrary",
       element:<Home/>,
     },
     {
