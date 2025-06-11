@@ -18,23 +18,23 @@ const Routes = createBrowserRouter(
     element:<App/>,
     errorElement: <Error/>,
     children:[{
-      path:"/OnlineLibrary",
+      path:"/OnlineLibrary/",
       element:<Home/>,
     },
     {
-      path:"/book/:id",
+      path:"book/:id",
       element:<Bookdesc/>,
     },
     {
-      path:"/Search/:category",
+      path:"Search/:category",
       element:<Category/>
     },
     {
-      path:"/Search",
+      path:"Search",
       element:<Search/>,
     },
     {
-      path:"/AddNew",
+      path:"AddNew",
       element:<AddNew/>
     }
     ]

@@ -4,8 +4,8 @@ export default function Header(){
     return(
         <ul className="Nav">
             <Link to="/OnlineLibrary"><li className="Nav-link">Home</li></Link>
-            <Link to="/Search"><li className="Nav-link">BrowseBooks</li></Link>
-            <Link to="/AddNew"><li className="Nav-link">AddBook</li></Link>
+            <Link to="Search"><li className="Nav-link">BrowseBooks</li></Link>
+            <Link to="AddNew"><li className="Nav-link">AddBook</li></Link>
         </ul>
     )
 }
