@@ -32,7 +32,7 @@ return(
             <p className="end-desc"><span className="span-text">Rating: </span>{book.rating}</p>
              <p className="end-desc"><span className="span-text">Genre: </span>{book.genre}</p>
              </div>
-             <Link to="Search"><button className="desc-btn">Go to Book</button></Link>
+             <Link to="/Search"><button className="desc-btn">Go to Book</button></Link>
         </div>
         
         </div>

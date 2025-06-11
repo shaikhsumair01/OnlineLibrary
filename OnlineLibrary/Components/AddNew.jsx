@@ -41,7 +41,7 @@ export default function AddNew() {
                 description: "",
                 cover_img: "",
             });
-            navigate("Search"); // Redirect **only after successful validation**
+            navigate("/Search"); // Redirect **only after successful validation**
 
         }
     }
